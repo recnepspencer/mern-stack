@@ -1,6 +1,14 @@
+import authReducer from '../features/auth/authSlice'
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout, reset } from "../features/auth/authSlice";
+
+
 function Dashboard() {
+  const { user } = useSelector((state) => state.auth);
+
   return (
-    <div>Dashboard</div>
+    user ? <div>Dashboard</div> : null
   )
 }
 

@@ -1,4 +1,4 @@
-import { FaSignInAlt, FaUser } from "react-icons/fa";
+import { FaSignOutAlt, FaSignInAlt, FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../features/auth/authSlice";
@@ -21,10 +21,10 @@ function SiteHeader() {
       <ul>
         {user ? (
           <li>
-            <button className='btn' onClick={(onLogout)}></button>
-            <Link to="/login">
-              <FaSignInAlt /> Login
-            </Link>
+            <button className='btn' onClick={(onLogout)}>
+            <FaSignOutAlt /> Log Out
+            </button>
+            
           </li>
         ) : (
           <>
