@@ -21,7 +21,7 @@ function SiteHeader() {
       <ul>
         {user ? (
           <li>
-            <button className='btn' onClick={(onLogout)}>
+            <button className='btn' onClick={onLogout}>
             <FaSignOutAlt /> Log Out
             </button>
             
